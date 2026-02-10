@@ -5,9 +5,11 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
-      child: Column(
+    return Container(
+      color: Colors.yellow[100],
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text('About CCS', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
@@ -19,10 +21,11 @@ class AboutScreen extends StatelessWidget {
             child: Image.network('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80', fit: BoxFit.cover),
           ),
           const SizedBox(height: 12),
-          const Text('Core Values', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('Core Values (QuEST)', style: TextStyle(fontWeight: FontWeight.bold)),
           const SizedBox(height: 6),
-          const Text('Excellence, Integrity, Innovation, Service.'),
+          const Text('Quality, Excellence, Service, and Truth'),
         ],
+      ),
       ),
     );
   }

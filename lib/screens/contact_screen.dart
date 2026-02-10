@@ -5,32 +5,35 @@ class ContactScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
+    return Container(
+      color: Colors.yellow[100],
+      child: SafeArea(
+        child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text('Contact', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 12),
-            ListTile(
-              leading: Icon(Icons.location_on),
-              title: Text('123 University Ave, Cityname'),
+          children: [
+            const Text('Contact', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
+            Card(
+              child: ListTile(
+                leading: CircleAvatar(
+                  radius: 24,
+                  backgroundImage: AssetImage('assets/icon.png'),
+                ),
+                title: const Text('NCFCCS'),
+                subtitle: const Text('Contact us on Facebook\nhttps://www.facebook.com/NCFCCS'),
+                trailing: const Icon(Icons.facebook, color: Colors.blue),
+                onTap: () {},
+              ),
             ),
-            ListTile(
-              leading: Icon(Icons.phone),
-              title: Text('+1 (555) 123-4567'),
-            ),
-            ListTile(
-              leading: Icon(Icons.email),
-              title: Text('ccs@university.edu'),
-            ),
-            SizedBox(height: 12),
-            Text('Office Hours', style: TextStyle(fontWeight: FontWeight.bold)),
-            SizedBox(height: 4),
-            Text('Mon - Fri: 8:00 AM - 5:00 PM'),
+            const SizedBox(height: 12),
+            const Text('Office Hours', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 4),
+            const Text('Mon - Sat: 8:00 AM - 5:00 PM'),
           ],
         ),
+      ),
       ),
     );
   }

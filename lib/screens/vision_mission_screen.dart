@@ -5,46 +5,31 @@ class VisionMissionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Column(
+    return Container(
+      color: Colors.yellow[100],
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Material(
-            color: Theme.of(context).colorScheme.primary,
-            child: TabBar(
-              indicatorColor: Colors.white,
-              tabs: const [Tab(text: 'Vision'), Tab(text: 'Mission')],
+          Text(
+            'Vision & Mission',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
-          Expanded(
-            child: TabBarView(
-              children: [
-                SingleChildScrollView(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('Vision', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 8),
-                      Text('To be a leading department in computing education and research, producing competent professionals.'),
-                    ],
-                  ),
-                ),
-                SingleChildScrollView(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('Mission', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 8),
-                      Text('1. Deliver quality instruction in computing fields.\n2. Engage in applied research and community service.\n3. Produce ethical and socially responsible graduates.'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const SizedBox(height: 12),
+          const Text('Vision', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+          const Text('To be Bicol\'s leading provider of high quality, transformative, industry - oriented, and affordable information technology education that is constantly responsive to the demands of the highly competitive global community.'),
+          const SizedBox(height: 16),
+          const Text('Mission', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+          const Text('We are  committed to develop God - loving, highly - competent, ethical, socially responsible, and globally - aware information technology professionals who will be the pro - active partners of society in nation building'),
         ],
+      ),
       ),
     );
   }

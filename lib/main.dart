@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CCS Department',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green[900]!),
         useMaterial3: true,
       ),
       home: const DepartmentApp(),
@@ -54,7 +54,15 @@ class _DepartmentAppState extends State<DepartmentApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CCS Department'),
+        title: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          decoration: BoxDecoration(
+            color: Colors.green[900],
+            borderRadius: BorderRadius.circular(4),
+          ),
+          child: const Text('CCS Department', style: TextStyle(color: Colors.white)),
+        ),
+        backgroundColor: Colors.green[900],
       ),
       drawer: Drawer(
         child: ListView(
@@ -62,7 +70,7 @@ class _DepartmentAppState extends State<DepartmentApp> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
+                color: Colors.green[900],
               ),
               child: const Text(
                 'CCS Department',
