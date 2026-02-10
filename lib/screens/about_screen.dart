@@ -18,7 +18,7 @@ class AboutScreen extends StatelessWidget {
           const SizedBox(height: 12),
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.network('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80', fit: BoxFit.cover),
+            child: Image.asset('assets/services.jpg', fit: BoxFit.cover),
           ),
           const SizedBox(height: 12),
           const Text('Core Values (QuEST)', style: TextStyle(fontWeight: FontWeight.bold)),
