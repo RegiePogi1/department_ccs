@@ -4,7 +4,6 @@ class OfficersScreen extends StatelessWidget {
   const OfficersScreen({super.key});
 
   final List<Map<String, String>> _officers = const [
-    {'name': 'Anna Loretta Capanag-Romulo', 'role': 'Head, CCS'},
     {'name': 'Kurt Basti Tacorda', 'role': 'Governor, CCS'},
     {'name': 'Christian Mancera', 'role': 'Vice Governor, CCS'},
     {'name': 'Rayza Rances', 'role': 'Secretary, CCS'},

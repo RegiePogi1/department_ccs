@@ -5,6 +5,7 @@ import 'screens/vision_mission_screen.dart';
 import 'screens/officers_screen.dart';
 import 'screens/contact_screen.dart';
 import 'screens/about_screen.dart';
+import 'screens/organizational_chart_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +43,7 @@ class _DepartmentAppState extends State<DepartmentApp> {
     OfficersScreen(),
     ContactScreen(),
     AboutScreen(),
+    OrganizationalChartScreen(),
   ];
 
   void _selectIndex(int index) {
@@ -82,6 +84,7 @@ class _DepartmentAppState extends State<DepartmentApp> {
             _drawerItem(Icons.group, 'Officers', 2),
             _drawerItem(Icons.contact_phone, 'Contact', 3),
             _drawerItem(Icons.info, 'About', 4),
+            _drawerItem(Icons.apartment, 'Organizational Chart', 5),
           ],
         ),
       ),
@@ -99,6 +102,7 @@ class _DepartmentAppState extends State<DepartmentApp> {
                   _topNavItem('Officers', 2, Icons.group),
                   _topNavItem('Contact', 3, Icons.contact_phone),
                   _topNavItem('About', 4, Icons.info),
+                  _topNavItem('Org Chart', 5, Icons.apartment),
                 ],
               ),
             ),
@@ -137,6 +141,10 @@ class _DepartmentAppState extends State<DepartmentApp> {
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
             label: 'About',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.apartment),
+            label: 'Org Chart',
           ),
         ],
       ),
